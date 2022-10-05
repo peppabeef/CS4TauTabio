@@ -10,7 +10,7 @@ public class Singer {
     }
 
     public void performForAudience(Audience audience) {
-        noOfPerformances += audience.number();
+        noOfPerformances++;
         totalEarnings += (audience.number() * audience.payment());
         double earnings = (audience.number() * audience.payment());
         System.out.printf("%s sang %s by %s for an audience of %d people and earned %.2f\n\nTotal number of Performances: %d\nTotal Earnings: %.2f\n\n", name, favoriteSong.title(), favoriteSong.artist(), audience.number(), earnings, noOfPerformances, totalEarnings);
