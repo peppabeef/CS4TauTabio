@@ -14,7 +14,7 @@ public class Singer {
     // for singing alone
     public void performForAudience(Audience audience) {
         noOfPerformances++;
-        totalPerformances += audience.number();
+        totalPerformances++;
         totalEarnings += (audience.number() * audience.payment());
         double earnings = (audience.number() * audience.payment());
         System.out.printf("%s sang %s by %s for an audience of %d people and earned %.2f\n\nTotal performances of %s: %d\nTotal performances of all singers: %s\nTotal Earnings: %.2f\n\n", name, favoriteSong.title(), favoriteSong.artist(), audience.number(), earnings, name, noOfPerformances, totalPerformances, totalEarnings);
@@ -22,9 +22,8 @@ public class Singer {
 
     // for singing with another singer
     public void performForAudience(Audience audience, Singer singer) {
-        Singer.totalPerformances += audience.number();
         noOfPerformances++;
-        totalPerformances += audience.number();
+        totalPerformances += 2;
         totalEarnings += ((audience.number() * audience.payment()) / 2);
         singer.incrementNoOfPerformances(1);
         singer.totalEarnings += ((audience.number() * audience.payment()) / 2);
